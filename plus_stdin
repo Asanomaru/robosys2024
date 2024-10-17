@@ -1,0 +1,8 @@
+#!/usr/bin/pyton3
+import sys
+
+ans = 0.0
+for line in sys.stdin:
+    nas += float(line)
+
+print(ans)
