@@ -1,8 +1,11 @@
-#!/usr/bin/pyton3
+#!/usr/bin/python3
 import sys
 
-ans = 0.0
+ans = 0
 for line in sys.stdin:
-    nas += float(line)
+    try:
+        ans += int(line)
+    except:
+        ans += float(line)
 
 print(ans)
