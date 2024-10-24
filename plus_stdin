@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 #SPDX-FlieCopyrightText: 2024 Yuuki Udagawa
+# SPDX-License-Identifier: BSD-3-Clause
+
 import sys
 
 ans = 0
