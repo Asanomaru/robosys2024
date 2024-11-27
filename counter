@@ -9,5 +9,4 @@ user_input_text = sys.stdin.read()
 character_count = len(user_input_text)
 word_count = len(user_input_text.split())
 
-print("入力された文字数は{}文字です".format(character_count -1))
-print("入力された単語数は{}単語です".format(word_count))
+print("入力された文字数と単語数は{}文字と{}単語です。".format(character_count -1, word_count))
