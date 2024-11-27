@@ -5,15 +5,15 @@
 import sys
 
 if len(sys.argv) > 1:
-    input_text = " ".join(sys.argv[1:])
+    user_input_text = " ".join(sys.argv[1:])
 else:
-    input_text = sys.stdin.read().strip()
+    user_input_text = sys.stdin.read().strip()
 
-if not input_text:
+if not user_input_text:
     print("入力なし")
 else:
-    character_count = len(input_text)
-    word_count = len(input_text.split())
+    character_count = len(user_input_text)
+    word_count = len(user_input_text.split(" "))
 
-    print("入力された文字数は{}文字です。".format(character_count))
-    print("入力された単語数は{}単語です。".format(word_count))
+    print("入力された文字数は{}です".format(character_count))
+    print("入力された単語数は{}です".format(word_count))
