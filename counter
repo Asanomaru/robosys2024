@@ -4,9 +4,12 @@
 
 import sys
 
-user_input_text = sys.stdin.read()
+user_input_text = sys.stdin.read().strip()
 
-character_count = len(user_input_text)
-word_count = len(user_input_text.split())
+if not user_input_text:
+    print("入力なし")
+else:
+    character_count = len(user_input_text)
+    word_count = len(user_input_text.split())
 
-print("入力された文字数と単語数は{}文字と{}単語です。".format(character_count -1, word_count))
+    print("入力された文字数と単語数は{}文字と{}単語です。".format(character_count -1, word_count))
