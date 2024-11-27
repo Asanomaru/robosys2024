@@ -12,4 +12,4 @@ else:
     character_count = len(user_input_text)
     word_count = len(user_input_text.split())
 
-    print("入力された文字数と単語数は{}文字と{}単語です。".format(character_count -1, word_count))
+    print("入力された文字数と単語数は{}文字と{}単語です。".format(character_count, word_count))
