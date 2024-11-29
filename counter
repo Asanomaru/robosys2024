@@ -6,9 +6,21 @@ import sys
 
 user_input_text = sys.stdin.read().strip()
 
-if not user_input_text:
-    print("入力なし")
-else:
+try:
+    if not user_input_text:
+        print("入力なし")
+
+    non_n_c = True
+
+    for c in user_input_text:
+        if c.isalpha():
+            non_n_c = False
+        break
+
+    if non_n_c:
+        raise ValueError("")
+
+
     character_count = len(user_input_text)
     word_count = len(user_input_text.split())
     word_list = list(user_input_text.split())
@@ -18,3 +30,6 @@ else:
     print("使われた単語")
     for i, word in enumerate(word_list):
         print("{}語目：{}".format(i+1, word))
+
+except ValueError:
+    sys.exit(1)
