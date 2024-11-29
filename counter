@@ -10,15 +10,25 @@ try:
     if not user_input_text:
         print("入力なし")
 
-    non_n_c = True
+    japanse = False
 
-    for c in user_input_text:
-        if c.isalpha():
-            non_n_c = False
+    for char in user_input_text:
+        if ("\u3040" <= char <= "\u3090F") or ("\u30A0" <= char <= "\u30FF") or ("\u4E00" <= char <= "\u9FFF"):
+            japanse = True
         break
 
-    if non_n_c:
-        raise ValueError("")
+    if japanse:
+        raise ValueError()
+
+    numbers_symbols = False
+
+    for char in user_input_text:
+        if char.isalpha():
+            numbers_symbols = True
+        break
+
+    if numbers_symbols:
+        raise ValueError()
 
 
     character_count = len(user_input_text)
