@@ -2,7 +2,7 @@
 ロボットシステム学授業用
 [![test](https://github.com/Asanomaru/robosys2024/actions/workflows/test.yml/badge.svg)](https://github.com/Asanomaru/robosys2024/actions/workflows/test.yml)
 
-# counter
+# counterコマンド
 
 入力された文字から文字数と単語数を数えることができる
 
