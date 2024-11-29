@@ -1,86 +1,59 @@
 # robosys2024
 ロボットシステム学授業用
 
-# counter
+# counterコマンド
+[![test](https://github.com/Asanomaru/robosys2024/actions/workflows/test.yml/badge.svg)](https://github.com/Asanomaru/robosys2024/actions/workflows/test.yml)
 
-入力された文字から文字数と単語数を数えることができる
 
 ## 概要
 
-- このプロジェクトは何をするものか？
-　入力された文字から文字数と単語数を数えるもの
+このプロジェクトは,入力された文字を解析し以下の機能があります
 
-- なぜこのプロジェクトが必要なのか？
-　自分が入力した文字が何文字で何単語使われているかを確認するため
+　1. 文字数のカウント
+  2. 単語数のカウント
+  3. 入力された単語のリスト表示 
 
-- 主な機能は何か？
-　文字数と単語数を数える機能
+## 必要なソフトウェア
+- Python
+  - テスト済みバージョン: 3.7~3.11
 
-## インストール方法
+## テスト環境
+- Ubuntu 20.04
 
-以下の手順でプロジェクトをローカル環境にインストールしてください。
+© 2024 Yuuki Udagawa
 
-```bash
-リポジトリをクローン
-git clone https://github.com/username/repository.git
+## 使用方法
 
-ディレクトリに移動
-cd repository
+手順
+1. プロジェクトをローカル環境にクローンします
+```
+git clone https://github.com/Asanomaru/robosys2024.git
+```
 
-依存関係をインストール
-pip install -r requirements.txt```
+2. リポジトリのディレクトリに移動します
+```
+cd robosys2024
+```
 
-## 使い方
+3. 実行権限を付与します
+```
+chmod +x counter
+```
 
-実行方法の例
+実行例
+コマンドを実行し、文字を入力します
+```
+echo This is a pen. | ./counter
+```
 
-ここでは実行方法について二つ紹介をする
-
-まず一つ目
-
-例えばThis is a pen.と入力したい場合
-echo This is a pen. | ./counterと書き、実行すると
-「入力された文字数と単語数は14文字と4単語です」と表示される
-
-何も入力しなかった場合
-echo | ./counterと書き、実行すると
-「入力なし」と表示される
-
-次に二つ目
-
-
-## サンプル
-
-サンプルコード
-
-import sys
-
-user_input_text = sys.stdin.read().strip()
-
-if not user_input_text:
-    print("入力なし")
-else:
-    character_count = len(user_input_text)
-    word_count = len(user_input_text.split())
-
-    print("入力された文字数と単語数は{}文字と{}単語です".format(character_count, word_count))
+実行結果の例
+入力された文字数は14文字、単語数は4単語です
+使われた単語
+1語目：This
+2語目：is
+3語目：a
+4語目：pen.
 
 ## ライセンス
-
-このプロジェクトはMITライセンスのもとで公開されています。
-
-## 貢献
-
-貢献方法は以下の通りです。
-
-1.フォークする。
-2.新しいブランチを作成する。(git checkout -b feature/YourFeature)
-3.コードをコミットする。(git commit -m 'Add some feature')
-4.プッシュする。(git push origin feature/YourFeature)
-5.プルリクエストを作成する。
-
-## クレジット
-(使用したライブラリや貢献者の名前を記す。)
-
-DuC
-
+   - このソフトウェアパッケージは, 3条項BADライセンスの下, 再頒布および使用が許可されます.
+   - © 2024 Yuuki Udagawa
