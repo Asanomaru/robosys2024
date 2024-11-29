@@ -11,5 +11,10 @@ if not user_input_text:
 else:
     character_count = len(user_input_text)
     word_count = len(user_input_text.split())
+    word_list = list(user_input_text.split())
 
-    print("入力された文字数と単語数は{}文字と{}単語です".format(character_count, word_count))
+    print("入力された文字数は{}文字、単語数は{}単語です".format(character_count, word_count))
+
+    print("使われた単語")
+    for i, word in enumerate(word_list):
+        print(i+1, ":", word)
