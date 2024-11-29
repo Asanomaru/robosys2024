@@ -1,8 +1,12 @@
 # robosys2024
 ロボットシステム学授業用
+[![test](https://github.com/Asanomaru/robosys2024/actions/workflows/test.yml/badge.svg)](https://github.com/Asanomaru/robosys2024/actions/workflows/test.yml)
 
 # counterコマンド
+<<<<<<< HEAD
 [![test](https://github.com/Asanomaru/robosys2024/actions/workflows/test.yml/badge.svg)](https://github.com/Asanomaru/robosys2024/actions/workflows/test.yml)
+=======
+>>>>>>> 2201ad344bd391b44de807443b2cd76e6cd17211
 
 
 ## 概要
