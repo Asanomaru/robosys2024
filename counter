@@ -11,7 +11,6 @@ try:
         print("入力なし")
 
     japanse = False
-
     for char in user_input_text:
         if ("\u3040" <= char <= "\u3090F") or ("\u30A0" <= char <= "\u30FF") or ("\u4E00" <= char <= "\u9FFF"):
             japanse = True
@@ -20,16 +19,23 @@ try:
     if japanse:
         raise ValueError()
 
-    numbers_symbols = False
-
+    chars = []
     for char in user_input_text:
-        if char.isalpha():
-            numbers_symbols = True
-        break
+        if not char.isspace():
+            chars.append(char)
 
-    if numbers_symbols:
+    non_alpha = []
+    for char in chars:
+        non_alpha.append(not char.isalpha())
+
+    only_numbers_symbols = True
+    for char2 in non_alpha:
+        if not char2:
+            only_numbers_symbols = False
+            break
+
+    if only_numbers_symbols:
         raise ValueError()
-
 
     character_count = len(user_input_text)
     word_count = len(user_input_text.split())
