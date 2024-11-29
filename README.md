@@ -3,19 +3,15 @@
 [![test](https://github.com/Asanomaru/robosys2024/actions/workflows/test.yml/badge.svg)](https://github.com/Asanomaru/robosys2024/actions/workflows/test.yml)
 
 # counterコマンド
-<<<<<<< HEAD
 [![test](https://github.com/Asanomaru/robosys2024/actions/workflows/test.yml/badge.svg)](https://github.com/Asanomaru/robosys2024/actions/workflows/test.yml)
-=======
->>>>>>> 2201ad344bd391b44de807443b2cd76e6cd17211
-
 
 ## 概要
 
 このプロジェクトは,入力された文字を解析し以下の機能があります
 
-　1. 文字数のカウント
-  2. 単語数のカウント
-  3. 入力された単語のリスト表示 
+　- 文字数のカウント
+  - 単語数のカウント
+  - 入力された単語のリスト表示 
 
 ## 必要なソフトウェア
 - Python
@@ -50,7 +46,7 @@ chmod +x counter
 echo This is a pen. | ./counter
 ```
 
-実行結果の例
+- 実行結果の例
 入力された文字数は14文字、単語数は4単語です
 使われた単語
 1語目：This
