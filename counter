@@ -17,4 +17,4 @@ else:
 
     print("使われた単語")
     for i, word in enumerate(word_list):
-        print(i+1, ":", word)
+        print("{}語目：{}".format(i+1, word))
