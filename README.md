@@ -2,7 +2,7 @@
 ロボットシステム学授業用
 
 # counterコマンド
-[![test](https://github.com/Asanomaru/robosys2024/actions/workflows/test.yml/badge.svg)](https://github.com/Asanomaru/robosys2024/actions/workflows/test.yml)
+
 
 ## 概要
 
