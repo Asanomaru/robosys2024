@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# SPDX-FileCopyrightText: 2024 Yuuki Udagawa
+# SPDX-FileCopyrightText: 2024 Yuuki Udagawa 
 # SPDX-License-Identifier: BSD-3-Clause
 
 import sys
@@ -8,7 +8,7 @@ user_input_text = sys.stdin.read().strip()
 
 try:
     if not user_input_text:
-        print("入力なし")
+        raise ValueError()
 
     japanse = False
     for char in user_input_text:
@@ -19,8 +19,19 @@ try:
     if japanse:
         raise ValueError()
 
+    words = user_input_text.split()
+
+    cleaned_words = []
+    for word in words:
+        cleaned_word = word.rstrip(".")
+        cleaned_words.append(cleaned_word)
+
+
+    cleaned_text = " ".join(cleaned_words)
+
+
     chars = []
-    for char in user_input_text:
+    for char in cleaned_text:
         if not char.isspace():
             chars.append(char)
 
@@ -37,15 +48,12 @@ try:
     if only_numbers_symbols:
         raise ValueError()
 
-    character_count = len(user_input_text)
-    word_count = len(user_input_text.split())
-    word_list = list(user_input_text.split())
+    character_count = len(cleaned_text)
+    word_count = len(cleaned_words)
+    word_list = list(cleaned_words)
 
-    print("入力された文字数は{}文字、単語数は{}単語です".format(character_count, word_count))
+    print("{} {}".format(character_count, word_count))
 
-    print("使われた単語")
-    for i, word in enumerate(word_list):
-        print("{}語目：{}".format(i+1, word))
 
 except ValueError:
     sys.exit(1)
