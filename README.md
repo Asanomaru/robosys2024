@@ -26,19 +26,19 @@ chmod +x counter
 ```
 
 ## 実行例と結果
-1. コマンド:
+1. コマンド
    ```
    echo This is a pen. | ./counter
    ```
-   実行結果:
+   実行結果
    ```
    13 4
    ```
-2. コマンド:
+2. コマンド
    ```
    echo Apple Apple | ./counter
    ```
-   実行結果:
+   実行結果
    ```
    11 2
    ```
