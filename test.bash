@@ -16,6 +16,8 @@ out=$(echo This is a pen. | ./counter)
 out=$(echo 20 years old | ./counter)
 [ "${out}" = "12 3" ] || ng "$LINENO"
 
+out=$(echo Apple Apple |./counter)
+[ "${out}" = "11 2" ] || ng "$LINENO"
 
 #異常な入力
 out=$(echo | ./counter)
