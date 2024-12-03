@@ -25,23 +25,23 @@ cd robosys2024
 chmod +x counter
 ```
 
-- 実行例と結果
-実行例1
-```
-echo This is a pen. | ./counter
-```
-実行結果
-```
-13 4
-```
-実行例2
-```
-echo Apple Apple | ./counter
-```
-実行結果
-```
-11 2
-```
+## 実行例と結果
+1. コマンド:
+   ```
+   echo This is a pen. | ./counter
+   ```
+   実行結果:
+   ```
+   13 4
+   ```
+2. コマンド:
+   ```
+   echo Apple Apple | ./counter
+   ```
+   実行結果:
+   ```
+   11 2
+   ```
 
 ## 出力結果の説明
 - 最初の数字: 入力された文字の総文字数
